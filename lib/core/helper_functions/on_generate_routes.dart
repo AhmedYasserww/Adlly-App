@@ -2,6 +2,7 @@
 import 'package:adlly_app/features/auth/presentation/views/forget_password_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/sign_up_view.dart';
+import 'package:adlly_app/features/auth/presentation/views/verify_code_view.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
@@ -12,6 +13,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const SignUpView());
      case ForgetPasswordView.routeName:
       return MaterialPageRoute(builder: (context) => const ForgetPasswordView());
+      case VerifyCodeView.routeName:
+      return MaterialPageRoute(builder: (context) => const VerifyCodeView());
     default:
       return MaterialPageRoute(builder: (context) => const Scaffold());
   }
