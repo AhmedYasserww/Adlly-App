@@ -1,3 +1,4 @@
+import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../Core/widgets/custom_text_form_field_widget.dart';
@@ -23,6 +24,7 @@ class EmailField extends StatelessWidget {
         ).hasMatch(value);
         return emailValid ? null : 'please enter a valid email';
       },
+      prefixIcon: const Icon(Icons.email,color: AppColors.lightPrimaryColor ),
     );
   }
 }

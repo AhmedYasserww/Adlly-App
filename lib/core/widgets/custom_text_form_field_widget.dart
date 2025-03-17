@@ -36,7 +36,7 @@ class CustomTextField extends StatelessWidget {
               filled: true,
             prefixIcon:prefixIcon ,
             prefixIconColor: Colors.black.withOpacity(.7),
-            hintText:hintText ,
+            labelText:hintText ,
             suffixIcon: suffixIcon,
 
               hintStyle: const TextStyle(fontSize: 13,
