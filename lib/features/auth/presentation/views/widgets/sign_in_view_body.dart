@@ -3,6 +3,7 @@ import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:adlly_app/core/utils/app_images.dart';
 import 'package:adlly_app/core/utils/app_text_styles.dart';
 import 'package:adlly_app/core/widgets/custom_button.dart';
+import 'package:adlly_app/features/auth/presentation/views/forget_password_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/custom_email_text_field.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/custom_password_text_field.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/custom_social_button.dart';
@@ -69,8 +70,13 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                       isTermsAccepted = value;
                     },
                   ),
-                  Text("forget password ?",style: AppTextStyles.semiBold13.copyWith(color:AppColors.lightPrimaryColor),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).pushNamed(ForgetPasswordView.routeName);
+                    },
+                    child: Text("forget password ?",style: AppTextStyles.semiBold13.copyWith(color:AppColors.lightPrimaryColor),
 
+                    ),
                   ),
                 ],
               ),

@@ -100,7 +100,6 @@ confirmPasswordController.dispose();
                 // },
                 text: "Sign Up",
               ),
-              const SizedBox(height: 26,),
               const HaveAnAccountWidget()
             ],
           ),
