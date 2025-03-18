@@ -25,6 +25,7 @@ class AppImages {
   static const String cartIconSelected = 'assets/images/cart_icon_selected.svg';
   static const String productsIconSelected = 'assets/images/products_icon_selected.svg';
   static const String productsIcon = 'assets/images/products_icon.svg';
+  static const String successIcon = 'assets/images/successIcon.svg';
 
 
 }

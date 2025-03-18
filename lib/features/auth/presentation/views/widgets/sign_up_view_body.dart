@@ -15,7 +15,6 @@ class SignUpViewBody extends StatefulWidget {
 }
 
 class _SignUpViewBodyState extends State<SignUpViewBody> {
-  bool visible = true;
   late TextEditingController nameController;
   late TextEditingController emailController;
   late TextEditingController passwordController;
@@ -24,9 +23,18 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
   late bool  isTermsAccepted = false;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
-  void toggleVisibility() {
+  bool passwordVisible = true;
+  bool confirmPasswordVisible = true;
+
+
+  void togglePasswordVisibility() {
     setState(() {
-      visible = !visible;
+      passwordVisible = !passwordVisible;
+    });
+  }
+  void toggleConfirmPasswordVisibility() {
+    setState(() {
+      confirmPasswordVisible = !confirmPasswordVisible;
     });
   }
   @override
@@ -68,15 +76,15 @@ confirmPasswordController.dispose();
               const SizedBox(height: 16,),
               PasswordField(
                   passwordController: passwordController,
-                  visible: visible,
-                  toggleVisibility: toggleVisibility
+                  visible: passwordVisible,
+                  toggleVisibility: togglePasswordVisibility
               ),
               const SizedBox(height: 16,),
               ConfirmPasswordField(
                   passwordController: passwordController,
                   confirmPasswordController: confirmPasswordController,
-                  visible: visible,
-                  toggleVisibility: toggleVisibility
+                  visible: confirmPasswordVisible,
+                  toggleVisibility: toggleConfirmPasswordVisibility
               ),
               const SizedBox(height:30 ,),
               CustomButton(
