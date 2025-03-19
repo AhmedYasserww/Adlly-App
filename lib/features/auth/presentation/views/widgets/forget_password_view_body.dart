@@ -1,6 +1,7 @@
 import 'package:adlly_app/core/widgets/custom_button.dart';
 import 'package:adlly_app/features/auth/presentation/views/verify_code_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/custom_email_text_field.dart';
+import 'package:adlly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_text_styles.dart';
@@ -31,14 +32,14 @@ class _ForgetPasswordViewBodyState extends State<ForgetPasswordViewBody> {
         child: Column(
           children: [
             const SizedBox(height: 24 ,),
-        const Text("Please enter your email address to receive a password reset code .",style: AppTextStyles.semiBold16,  textAlign: TextAlign.center,),
+         Text(S.of(context).forget_password_description,style: AppTextStyles.semiBold16,  textAlign: TextAlign.center,),
             const SizedBox(height: 32,),
             EmailField(
                 emailController: emailController
             ),
             const SizedBox(height: 30,),
             CustomButton(
-              text: "Send Code",
+                text:S.of(context).send_code,
               onPressed: (){
                 Navigator.of(context).pushNamed(VerifyCodeView.routeName);
               },

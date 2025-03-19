@@ -3,6 +3,8 @@ import 'package:adlly_app/core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../generated/l10n.dart';
+
 void showSuccessDialog( BuildContext context) {
   showDialog(
     context: context,
@@ -16,8 +18,8 @@ void showSuccessDialog( BuildContext context) {
           children: [
             SvgPicture.asset(AppImages.successIcon),
             const SizedBox(height: 16),
-            const Text(
-              "Change Password Successfully",
+             Text(
+              S.of(context).change_password_successfully,
               style: AppTextStyles.bold16,
               textAlign: TextAlign.center,
             ),
@@ -26,7 +28,7 @@ void showSuccessDialog( BuildContext context) {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text("OK"),
+            child:  Text(S.of(context).ok),
           ),
         ],
       );

@@ -1,6 +1,7 @@
 import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:adlly_app/core/utils/app_text_styles.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/custom_check_box.dart';
+import 'package:adlly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class TermsAndConditionWidget extends StatefulWidget {
@@ -26,7 +27,7 @@ class _TermsAndConditionWidgetState extends State<TermsAndConditionWidget> {
           isChecked:isTermsAccepted,
        ),
         const SizedBox(width: 16,),
-      Text("Remember me",style: AppTextStyles.semiBold13.copyWith(color: AppColors.lightPrimaryColor),),
+      Text(S.of(context).remember_me,style: AppTextStyles.semiBold13.copyWith(color: AppColors.lightPrimaryColor),),
       ],
     );
   }

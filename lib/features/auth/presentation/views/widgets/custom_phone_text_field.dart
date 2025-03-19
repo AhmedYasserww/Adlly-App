@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_color.dart';
 import '../../../../../core/widgets/custom_text_form_field_widget.dart';
+import '../../../../../generated/l10n.dart';
 
 class PhoneNumberField extends StatelessWidget {
   final TextEditingController phoneController;
@@ -11,13 +12,14 @@ class PhoneNumberField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomTextField(
-        hintText: "Phone Number",
+      keyboardType: TextInputType.number,
+        hintText: S.of(context).phone_number,
         controller: phoneController,
         validator: (value) {
           if (value == null || value.isEmpty) {
-            return 'This field is required. Please enter a phone number.';
+            return S.of(context).requird_this_field;
           } else if (value.length != 11) {
-            return 'Phone number must be exactly 11 digits long.';
+            return S.of(context).vaild_phone_number;
           }
           return null;
         },

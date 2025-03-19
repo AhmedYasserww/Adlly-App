@@ -1,6 +1,7 @@
 import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:adlly_app/core/utils/app_text_styles.dart';
 import 'package:adlly_app/features/auth/presentation/views/sign_up_view.dart';
+import 'package:adlly_app/generated/l10n.dart';
 
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class DoNotHaveAnAccountWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Do not have an account?',
+          S.of(context).dont_have_an_account,
           style: AppTextStyles.semiBold16.copyWith(
             color: const Color(0xFF949D9E),
           ),
@@ -27,7 +28,7 @@ class DoNotHaveAnAccountWidget extends StatelessWidget {
             padding: EdgeInsets.zero,
           ),
           child: Text(
-            'Sign Up',
+            S.of(context).sign_up,
             style: AppTextStyles.semiBold16.copyWith(
               color: AppColors.primaryColor,
             ),

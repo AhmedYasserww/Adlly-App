@@ -2,6 +2,7 @@ import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../Core/widgets/custom_text_form_field_widget.dart';
+import '../../../../../generated/l10n.dart';
 
 class ConfirmPasswordField extends StatelessWidget {
   final TextEditingController passwordController;
@@ -21,18 +22,18 @@ class ConfirmPasswordField extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomTextField(
       keyboardType: TextInputType.visiblePassword,
-      hintText: "Confirm Password",
+      hintText: S.of(context).confirm_password,
       controller: confirmPasswordController,
       obscureText: visible,
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'Required this field';
+          return S.of(context).requird_this_field;
         }
         if (value.length < 6) {
-          return 'Password must be at least 6 characters';
+          return S.of(context).password_must_be_at_least_6_characters;
         }
         if (value != passwordController.text) {
-          return 'Passwords do not match';
+          return S.of(context).confirm_password_not_match;
         }
         return null;
       },

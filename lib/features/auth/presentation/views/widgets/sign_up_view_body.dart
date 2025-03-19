@@ -6,6 +6,7 @@ import 'package:adlly_app/features/auth/presentation/views/widgets/custom_name_t
 import 'package:adlly_app/features/auth/presentation/views/widgets/custom_password_text_field.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/custom_phone_text_field.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/have_an_account_widget.dart';
+import 'package:adlly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 class SignUpViewBody extends StatefulWidget {
   const SignUpViewBody({super.key});
@@ -106,7 +107,7 @@ confirmPasswordController.dispose();
                 //     });
                 //   }
                 // },
-                text: "Sign Up",
+                text: S.of(context).sign_up,
               ),
               const HaveAnAccountWidget()
             ],

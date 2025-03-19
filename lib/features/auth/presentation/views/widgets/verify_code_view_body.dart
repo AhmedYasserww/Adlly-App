@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:adlly_app/core/widgets/custom_button.dart';
 import 'package:adlly_app/features/auth/presentation/views/new_password_view.dart';
+import 'package:adlly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -25,7 +26,7 @@ class VerifyCodeViewBody extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text.rich(
                 TextSpan(
-                  text: "Enter the 6-digit code sent to \n",
+                  text:  S.of(context).verify_code_description,
                   style: AppTextStyles.semiBold16,
                   children: [
                     TextSpan(
@@ -65,7 +66,7 @@ class VerifyCodeViewBody extends StatelessWidget {
             },
           ),
           const SizedBox(height: 30,),
-          CustomButton(text: "Verify",onPressed: (){
+          CustomButton(text: S.of(context).verify,onPressed: (){
       Navigator.of(context).pushNamed(NewPasswordView.routeName);
           },),
         ],

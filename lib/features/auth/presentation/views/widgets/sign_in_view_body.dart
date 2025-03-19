@@ -10,6 +10,7 @@ import 'package:adlly_app/features/auth/presentation/views/widgets/custom_social
 import 'package:adlly_app/features/auth/presentation/views/widgets/do_not_have_an_account_widget.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/term_and_condition_widget.dart';
+import 'package:adlly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 class SignInViewBody extends StatefulWidget {
   const SignInViewBody({super.key});
@@ -74,7 +75,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                     onTap: (){
                       Navigator.of(context).pushNamed(ForgetPasswordView.routeName);
                     },
-                    child: Text("forget password ?",style: AppTextStyles.semiBold13.copyWith(color:AppColors.lightPrimaryColor),
+                    child: Text(S.of(context).forget_password,style: AppTextStyles.semiBold13.copyWith(color:AppColors.lightPrimaryColor),
 
                     ),
                   ),
@@ -97,7 +98,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
 //                     });
 //                   }
 //                 },
-                text: "Log in ",
+                text: S.of(context).login,
               ),
               const SizedBox(height: 33,),
               const DoNotHaveAnAccountWidget(),
@@ -111,7 +112,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 //  context.read<SignInCubit>().signInWithGoogle();
                 },
                 imagePath: AppImages.googleIcon,
-                text: "Login with Google",
+                text: S.of(context).sign_in_with_google,
               ),
               const SizedBox(height: 16,),
 

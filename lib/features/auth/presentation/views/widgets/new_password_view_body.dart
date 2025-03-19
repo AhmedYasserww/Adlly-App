@@ -2,6 +2,7 @@ import 'package:adlly_app/core/widgets/custom_button.dart';
 import 'package:adlly_app/core/widgets/show_success_dialog.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/confirm_password_field.dart';
 import 'package:adlly_app/features/auth/presentation/views/widgets/custom_password_text_field.dart';
+import 'package:adlly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 class NewPasswordViewBody extends StatefulWidget {
@@ -43,7 +44,7 @@ class _NewPasswordViewBodyState extends State<NewPasswordViewBody> {
             const SizedBox(
               height: 24,
             ),
-        const Text("Create a new password for your account ",style: AppTextStyles.semiBold16,),
+         Text(S.of(context).create_password_description,style: AppTextStyles.semiBold16,),
             const SizedBox(height: 34,),
             PasswordField(passwordController: passwordController,
                 visible: passwordVisible,
@@ -55,7 +56,7 @@ class _NewPasswordViewBodyState extends State<NewPasswordViewBody> {
                 toggleVisibility: toggleConfirmPasswordVisibility
                 ),
         const SizedBox(height: 24,),
-            CustomButton(text: "Change Password",onPressed: (){
+            CustomButton(text: S.of(context).change_password,onPressed: (){
               showSuccessDialog(context);
             },)
           ],
