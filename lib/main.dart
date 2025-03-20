@@ -2,6 +2,7 @@ import 'package:adlly_app/core/helper_functions/on_generate_routes.dart';
 import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:adlly_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:adlly_app/generated/l10n.dart';
+import 'package:adlly_app/support/presentation/views/support_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: Locale('ar'),
+      locale: const Locale('en'),
      //locale: Locale('en'),
 
 
@@ -32,8 +33,8 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
          onGenerateRoute: onGenerateRoutes,
-       initialRoute: SignInView.routeName
-      // initialRoute: HomeView.routeName
+       //initialRoute: SignInView.routeName
+       initialRoute: SupportView.routeName
     //  home: const MyWidget(),
     );
   }

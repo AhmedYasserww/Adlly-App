@@ -46,6 +46,14 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>mailto</string>
+  <string>whatsapp</string>
+  <string>fb-messenger</string>
+</array>
+
+
 
 	<key>CFBundleLocalizations</key>
 <array>
@@ -53,5 +61,6 @@
     <string>ar</string>
   
 </array>
+
 </dict>
 </plist>

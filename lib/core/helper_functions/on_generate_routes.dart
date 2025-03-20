@@ -4,6 +4,7 @@ import 'package:adlly_app/features/auth/presentation/views/new_password_view.dar
 import 'package:adlly_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/sign_up_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/verify_code_view.dart';
+import 'package:adlly_app/support/presentation/views/support_view.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
@@ -18,6 +19,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const VerifyCodeView());
       case NewPasswordView.routeName:
       return MaterialPageRoute(builder: (context) => const NewPasswordView());
+      case SupportView.routeName:
+      return MaterialPageRoute(builder: (context) => const SupportView());
     default:
       return MaterialPageRoute(builder: (context) => const Scaffold());
   }

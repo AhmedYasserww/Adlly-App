@@ -16,6 +16,11 @@ abstract class AppTextStyles {
     fontSize: 13,
     fontFamily: 'Cairo',
   );
+  static const TextStyle regular18 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 18,
+    fontFamily: 'Cairo',
+  );
 
   static const TextStyle regular13 = TextStyle(
     fontWeight: FontWeight.normal,
