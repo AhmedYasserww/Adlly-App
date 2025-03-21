@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../constant.dart';
-class LearnAboutAppWidget extends StatelessWidget {
-  const LearnAboutAppWidget({super.key});
+class LearnAboutAppHeaderWidget extends StatelessWidget {
+  const LearnAboutAppHeaderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

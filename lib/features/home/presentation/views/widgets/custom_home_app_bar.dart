@@ -4,6 +4,7 @@ import 'package:adlly_app/core/utils/app_text_styles.dart';
 import 'package:adlly_app/core/widgets/notification_widget.dart';
 import 'package:adlly_app/support/presentation/views/support_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomHomeAppBar({
@@ -13,17 +14,24 @@ class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      elevation: 0,
       centerTitle: true,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
+      shadowColor: Colors.transparent,
       title:const  Row(
         children: [
           CircleAvatar(
             backgroundImage: AssetImage(AppImages.appIcon),
           ),
           SizedBox(width: 10),
-          Text(
-            "Welcome, Ahmed 👋",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          Expanded(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                "Welcome, Ahmed 👋",
+                style: AppTextStyles.bold19,
+              ),
+            ),
           ),
         ],
       ),
@@ -45,7 +53,7 @@ class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
         ),
-        const SizedBox(width: 10),
+        const SizedBox(width: 16),
         NotificationWidget(onTap: (){},),
         const SizedBox(width: 10),
       ],

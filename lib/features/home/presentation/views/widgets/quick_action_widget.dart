@@ -9,8 +9,8 @@ class QuickActionsWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color(0xFFFAFAFA),
-        //color: const Color(0xFFEEF8ED),
+        //color: const Color(0xFFFAFAFA),
+        color: const Color(0xFFEEF8ED),
         borderRadius: BorderRadius.circular(12),
       ),
       child:  Column(

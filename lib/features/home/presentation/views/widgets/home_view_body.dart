@@ -1,7 +1,7 @@
 import 'package:adlly_app/core/widgets/custom_button.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/home_header_section.dart';
-import 'package:adlly_app/features/home/presentation/views/widgets/learn_about_app_header_widget.dart';
+import 'package:adlly_app/features/home/presentation/views/widgets/learn_about_app_section.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/out_other_services_title.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/quick_action_widget.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,7 @@ class HomeViewBody extends StatelessWidget {
             const SizedBox(height: 16),
             CustomButton(text: "Browse Our Services", onPressed: () {}),
             const SizedBox(height: 16),
-            const LearnAboutAppWidget(),
+          const LearnAboutAppSection(),
             const SizedBox(height: 24,)
           ],
         ),

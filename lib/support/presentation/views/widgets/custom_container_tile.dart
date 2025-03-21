@@ -4,14 +4,16 @@ import 'package:adlly_app/core/utils/app_color.dart'; // استيراد الأل
 
 class CustomContainerTile extends StatelessWidget {
   final String title;
-  final IconData leading;
+  final Widget? leading;
   final VoidCallback? onTap;
+  final String? subtitle;
 
   const CustomContainerTile({
     super.key,
     required this.title,
     required this.leading,
     this.onTap,
+    this.subtitle,
   });
 
   @override
@@ -37,12 +39,15 @@ class CustomContainerTile extends StatelessWidget {
           focusColor: AppColors.primaryColor,
           onTap: onTap,
           child: ListTile(
+            subtitle: subtitle != null
+                ? Text(subtitle!, style: AppTextStyles.medium15)
+                : null,
             title: Text(
               title,
-              style: AppTextStyles.regular18
+              style: AppTextStyles.regular18,
             ),
-            leading: Icon(leading, color: AppColors.primaryColor),
-            trailing: const Icon(Icons.arrow_forward_ios, color:AppColors.primaryColor),
+            leading: leading,
+            trailing: const Icon(Icons.arrow_forward_ios, color: AppColors.primaryColor),
           ),
         ),
       ),

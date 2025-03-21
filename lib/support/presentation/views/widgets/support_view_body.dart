@@ -1,4 +1,5 @@
 import 'package:adlly_app/core/helper_functions/custom_launch_url.dart';
+import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:adlly_app/support/presentation/views/widgets/custom_container_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -14,7 +15,8 @@ class SupportViewBody extends StatelessWidget {
           const SizedBox(height: 24),
           CustomContainerTile(
             title: "Contact via Email",
-            leading: Icons.email,
+
+            leading: const Icon(Icons.email,color: AppColors.primaryColor,),
             onTap: ()  {
 
               customLaunchUrl(context,'mailto:ahmedyasser2105ww@gmail.com');
@@ -24,7 +26,8 @@ class SupportViewBody extends StatelessWidget {
           const SizedBox(height: 16),
           CustomContainerTile(
             title: "Contact via Messenger",
-            leading: FontAwesomeIcons.facebookMessenger,
+            leading:const Icon(  FontAwesomeIcons.facebookMessenger,color: AppColors.primaryColor,),
+
             onTap: ()  {
               customLaunchUrl(context,'https://m.me/100028014644253');
             },
@@ -32,7 +35,7 @@ class SupportViewBody extends StatelessWidget {
           const SizedBox(height: 16),
           CustomContainerTile(
             title: "Contact via Whatsapp",
-            leading: FontAwesomeIcons.whatsapp,
+            leading:const Icon( FontAwesomeIcons.whatsapp,color: AppColors.primaryColor,),
             onTap: ()  {
               customLaunchUrl(context,'https://wa.me/+201147355363');
 
