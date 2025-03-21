@@ -2,8 +2,6 @@ import 'package:adlly_app/core/helper_functions/custom_launch_url.dart';
 import 'package:adlly_app/support/presentation/views/widgets/custom_container_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 class SupportViewBody extends StatelessWidget {
   const SupportViewBody({super.key});
 
