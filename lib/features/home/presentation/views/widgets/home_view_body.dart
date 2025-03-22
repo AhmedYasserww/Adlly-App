@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:adlly_app/core/widgets/custom_button.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/home_header_section.dart';
@@ -9,6 +11,8 @@ class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
   @override
   Widget build(BuildContext context) {
+    String width = MediaQuery.of(context).size.width.toString();
+    log(width);
     return Scaffold(
       appBar: const CustomHomeAppBar(),
       body: SingleChildScrollView(

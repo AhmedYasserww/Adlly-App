@@ -10,15 +10,21 @@ class HomeHeaderSection extends StatelessWidget {
     return   Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "Try $appName and create your first ad 🚀",
-          style:AppTextStyles.bold19,
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            "Try $appName and create your first ad 🚀",
+            style:AppTextStyles.bold19,
+          ),
         ),
         const SizedBox(height: 8),
-        const Text(
-          "Start now and boost your business easily!",
-          style: AppTextStyles.semiBold16,
-        ),
+         FittedBox(
+           fit: BoxFit.scaleDown,
+           child: Text(
+            "Start now and boost your business easily!",
+            style: AppTextStyles.semiBold16,
+                   ),
+         ),
       ],
     );
   }

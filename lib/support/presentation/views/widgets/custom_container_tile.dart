@@ -1,6 +1,7 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:adlly_app/core/utils/app_text_styles.dart';
-import 'package:adlly_app/core/utils/app_color.dart'; // استيراد الألوان
+import 'package:adlly_app/core/utils/app_color.dart';
 
 class CustomContainerTile extends StatelessWidget {
   final String title;
@@ -39,13 +40,22 @@ class CustomContainerTile extends StatelessWidget {
           focusColor: AppColors.primaryColor,
           onTap: onTap,
           child: ListTile(
-            subtitle: subtitle != null
-                ? Text(subtitle!, style: AppTextStyles.medium15)
-                : null,
-            title: Text(
+            title: AutoSizeText(
               title,
               style: AppTextStyles.regular18,
+              maxLines: 1,
+              minFontSize: 14,
+              overflow: TextOverflow.ellipsis,
             ),
+            subtitle: subtitle != null
+                ? AutoSizeText(
+              subtitle!,
+              style: AppTextStyles.medium15,
+              maxLines: 1,
+              minFontSize: 12,
+              overflow: TextOverflow.ellipsis,
+            )
+                : null,
             leading: leading,
             trailing: const Icon(Icons.arrow_forward_ios, color: AppColors.primaryColor),
           ),

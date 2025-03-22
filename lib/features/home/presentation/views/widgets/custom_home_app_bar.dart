@@ -18,9 +18,9 @@ class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       backgroundColor: Colors.transparent,
       shadowColor: Colors.transparent,
-      title:const  Row(
+      title:  Row(
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             backgroundImage: AssetImage(AppImages.appIcon),
           ),
           SizedBox(width: 10),
@@ -47,8 +47,8 @@ class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
 
             ),
 
-            child: const Padding(
-              padding:  EdgeInsets.all(6),
+            child:  Padding(
+              padding:  const EdgeInsets.all(6),
               child: Text("Support",style: AppTextStyles.bold16),
             ),
           ),
