@@ -4,8 +4,6 @@ import 'package:adlly_app/core/utils/app_text_styles.dart';
 import 'package:adlly_app/core/widgets/notification_widget.dart';
 import 'package:adlly_app/support/presentation/views/support_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomHomeAppBar({
     super.key,
@@ -18,9 +16,9 @@ class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       backgroundColor: Colors.transparent,
       shadowColor: Colors.transparent,
-      title:  Row(
+      title: const  Row(
         children: [
-          const CircleAvatar(
+           CircleAvatar(
             backgroundImage: AssetImage(AppImages.appIcon),
           ),
           SizedBox(width: 10),
@@ -47,8 +45,8 @@ class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
 
             ),
 
-            child:  Padding(
-              padding:  const EdgeInsets.all(6),
+            child:  const Padding(
+              padding:   EdgeInsets.all(6),
               child: Text("Support",style: AppTextStyles.bold16),
             ),
           ),
@@ -60,5 +58,5 @@ class CustomHomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
   @override
-  Size get preferredSize => const Size.fromHeight(50);
+  Size get preferredSize => const Size.fromHeight(56);
 }

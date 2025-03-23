@@ -1,3 +1,4 @@
+import 'package:adlly_app/features/wallet/presentation/views/wallet_view.dart';
 import 'package:flutter/material.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/custom_buttom_navigation_bar.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/home_view_body.dart';
@@ -17,7 +18,7 @@ class HomeViewState extends State<HomeView> {
     const HomeViewBody(),
 Container(),
     Container(),
-    Container(),
+    const WalletView(),
     Container()
   ];
 
