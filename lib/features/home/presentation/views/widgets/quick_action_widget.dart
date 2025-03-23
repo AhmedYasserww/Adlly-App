@@ -1,3 +1,4 @@
+import 'package:adlly_app/features/add_balance/presentation/views/add_balance_view.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/quick_action_item.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class QuickActionsWidget extends StatelessWidget {
             icon: Icons.account_balance_wallet,
             title: "Recharge your wallet",
             onTap: (){
+              Navigator.pushNamed(context,AddBalanceView.routeName);
             },
           ),
           const SizedBox(height: 10),

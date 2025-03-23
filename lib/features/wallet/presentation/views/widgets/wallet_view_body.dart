@@ -1,3 +1,4 @@
+import 'package:adlly_app/features/add_balance/presentation/views/add_balance_view.dart';
 import 'package:adlly_app/features/wallet/presentation/views/widgets/balance_card.dart';
 import 'package:adlly_app/features/wallet/presentation/views/widgets/details_card.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,9 @@ class WalletViewBody extends StatelessWidget {
           const SizedBox(height: 16),
           CustomButton(
             text: "Add Balance",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context,AddBalanceView.routeName);
+            },
           ),
           const SizedBox(height: 24),
           const DetailsCard(),
