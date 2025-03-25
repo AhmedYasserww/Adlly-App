@@ -1,5 +1,6 @@
 
 import 'package:adlly_app/features/add_balance/presentation/views/add_balance_view.dart';
+import 'package:adlly_app/features/add_balance/presentation/views/choose_transform_method_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/forget_password_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/new_password_view.dart';
 import 'package:adlly_app/features/auth/presentation/views/sign_in_view.dart';
@@ -27,6 +28,11 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const HomeView());
       case AddBalanceView.routeName:
       return MaterialPageRoute(builder: (context) => const AddBalanceView());
+    case ChooseTransformMethodView.routeName:
+      final amount = settings.arguments as String?;
+      return MaterialPageRoute(
+        builder: (context) => ChooseTransformMethodView(amount: amount ),
+      );
     default:
       return MaterialPageRoute(builder: (context) => const Scaffold());
   }

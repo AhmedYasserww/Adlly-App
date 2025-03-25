@@ -1,5 +1,8 @@
 
+import 'dart:developer';
+
 import 'package:adlly_app/core/widgets/custom_button.dart';
+import 'package:adlly_app/features/add_balance/presentation/views/choose_transform_method_view.dart';
 import 'package:adlly_app/features/add_balance/presentation/views/widgets/amount_input_row_section.dart';
 import 'package:adlly_app/features/add_balance/presentation/views/widgets/custom_section_title.dart';
 import 'package:adlly_app/features/add_balance/presentation/views/widgets/payment_details_section.dart';
@@ -105,7 +108,16 @@ class _AddBalanceViewBodyState extends State<AddBalanceViewBody> {
                 chargingValue: chargingValueController.text,
               ),
               const SizedBox(height: 16),
-              CustomButton(text: "Continue", onPressed: () {}),
+              CustomButton(
+                text: "Continue",
+                onPressed: () {
+                  log("Navigating with amount: ${chargingValueController.text}");
+                  Navigator.of(context).pushNamed(
+                    ChooseTransformMethodView.routeName,
+                    arguments:chargingValueController.text,
+                  );
+                },
+              ),
             ],
           ),
         ),

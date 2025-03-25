@@ -21,7 +21,7 @@ class AmountInputRowSection extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: CustomTextField(
+          child: CustomTextFieldWidget(
             keyboardType: TextInputType.number,
             hintText: "Amount",
             controller: amountController,
@@ -33,7 +33,7 @@ class AmountInputRowSection extends StatelessWidget {
           child: Icon(Icons.swap_horiz, size: 24, color: Colors.grey),
         ),
         Expanded(
-          child: CustomTextField(
+          child: CustomTextFieldWidget(
             keyboardType: TextInputType.number,
             hintText: "Charging Value",
             controller: chargingValueController,

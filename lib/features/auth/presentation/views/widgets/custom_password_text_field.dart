@@ -1,7 +1,6 @@
 import 'package:adlly_app/core/utils/app_color.dart';
+import 'package:adlly_app/core/widgets/custom_text_form_field_widget.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../Core/widgets/custom_text_form_field_widget.dart';
 import '../../../../../generated/l10n.dart';
 class PasswordField extends StatelessWidget {
   final TextEditingController passwordController;
@@ -17,7 +16,7 @@ class PasswordField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomTextField(
+    return CustomTextFieldWidget(
       keyboardType: TextInputType.visiblePassword,
       hintText: S.of(context).password,
       controller: passwordController,

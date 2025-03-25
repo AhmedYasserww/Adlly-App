@@ -1,14 +1,14 @@
 import 'package:adlly_app/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
-class CustomTextField extends StatelessWidget {
-   const CustomTextField({
+class CustomTextFieldWidget extends StatelessWidget {
+   const CustomTextFieldWidget({
      super.key,
      this.onSaved,this.onChange,
      this.validator, this.prefixIcon,this.suffixIcon,
      this.obscureText =false,
      this.controller,
     this.hintText,
-     this.keyboardType});
+     this.keyboardType,  this.readOnly = false,});
 
 
    final void Function(String?)? onSaved;
@@ -20,11 +20,12 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
    final String? hintText;
    final TextInputType? keyboardType;
+   final bool readOnly;
   @override
   Widget build(BuildContext context) {
 
       return TextFormField(
-
+readOnly: readOnly,
         keyboardType: keyboardType,
         controller: controller ,
         obscureText:obscureText,

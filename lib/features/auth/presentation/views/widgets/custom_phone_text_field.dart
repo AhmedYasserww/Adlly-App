@@ -11,7 +11,7 @@ class PhoneNumberField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomTextField(
+    return CustomTextFieldWidget(
       keyboardType: TextInputType.number,
         hintText: S.of(context).phone_number,
         controller: phoneController,
