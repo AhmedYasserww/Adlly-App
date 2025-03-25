@@ -1,3 +1,4 @@
+import 'package:adlly_app/features/advertisements/presentation/views/advertisements_view.dart';
 import 'package:adlly_app/features/wallet/presentation/views/wallet_view.dart';
 import 'package:flutter/material.dart';
 import 'package:adlly_app/features/home/presentation/views/widgets/custom_buttom_navigation_bar.dart';
@@ -14,12 +15,12 @@ class HomeView extends StatefulWidget {
 class HomeViewState extends State<HomeView> {
   int _selectedIndex = 0;
 
-  final List<Widget> _views = [
-    const HomeViewBody(),
-Container(),
-    Container(),
-    const WalletView(),
-    Container()
+  final List<Widget> _views = const [
+     HomeViewBody(),
+     AdvertisementsView(),
+    SizedBox(),
+     WalletView(),
+    SizedBox()
   ];
 
   void _onItemTapped(int index) {
